@@ -7,6 +7,7 @@ $data_order=$order->get_order($_SESSION['id']);
 
 $check_login=$user->check_login(true);
 $data=$user->get_user($_SESSION['email']);
+$_SESSION['photo_profile']=$data['photo'];
 $link=isset($_GET['do']) ? $_GET['do'] : '';
 
 if($link=="logout"){

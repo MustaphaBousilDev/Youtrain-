@@ -174,6 +174,7 @@ class User{
 				
 				move_uploaded_file($FILES['photo']['tmp_name'], $path);
 				$image = $path;
+                
 			}
 		}
         $arr['id']=$data['id'];
@@ -184,6 +185,7 @@ class User{
             $DB->write($query,$arr);
 		}else{
             $arr['photo']=$image;
+            $_SESSION['photo']=$image;
             $query="UPDATE users SET name=:name , email=:email , photo=:photo   WHERE id=:id LIMIT 1";
 			$DB->write($query,$arr);
 			

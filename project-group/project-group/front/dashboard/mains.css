@@ -122,11 +122,11 @@ nav .search-box .bx-search{
   cursor: pointer;
   height: 50px;
   width: 50px;
-  padding: 2px;
+  
 }
 .home-section nav .profile-details img{
-    width: 100%;height: 100%;
-    border-radius: 50%;
+    width: 100%;
+    
 }
 nav .profile-details img{
   height: 40px;

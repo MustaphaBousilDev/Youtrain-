@@ -1,4 +1,7 @@
 <nav>
+  <?php
+  
+  ?>
           <div class="sidebar-button">
             <i class='bx bx-menu sidebarBtn'></i>
             <span class="dashboard">Mugiwara</span>
@@ -7,9 +10,11 @@
             <input type="text" placeholder="Search...">
             <i class='bx bx-search' ></i>
           </div>
-          <div class="profile-details">
-            <a href="profile_user.php">
+          <div class="profile-details" style="padding:0;overflow:hidden;
+          ">
+            <a href="profile_users.php">
             <img 
+                style="width:50px;height:50px"
                 src="<?=$_SESSION['photo']?>" 
                 alt="">
             </a>
