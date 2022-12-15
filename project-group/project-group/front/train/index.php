@@ -73,13 +73,16 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     disponible=1 AND depart=:depart 
     AND arrivee=:arrivee";
     $result=$DB->read($query,$arr);
-    $_SESSION['orders']=$result;
-    //  echo "<pre>";
-    //  print_r( $_SESSION['orders'][0]['departname']);
-    //  echo "</pre>";
-    //  die;
-    header('Location:../dashboard/ticket.php');
-    die;
+    if(is_array($result)){
+      $_SESSION['orders']=$result;
+      //  echo "<pre>";
+      //  print_r( $_SESSION['orders'][0]['departname']);
+      //  echo "</pre>";
+      //  die;
+      header('Location:../dashboard/ticket.php');
+      die;
+    }
+   
     
 
     /*echo "<pre>";

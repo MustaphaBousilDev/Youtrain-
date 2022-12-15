@@ -17,9 +17,7 @@ global $connection;
 	if($_POST['data_type'] == 'get-edit-row')
 	{
 		$id =$_POST['id'];
-		echo "totototot";
-		echo $id;
-		die;
+		
 		$gare=new Trains();
 		$data=$gare->get_train($id);
 		

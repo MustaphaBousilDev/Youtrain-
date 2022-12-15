@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 14 déc. 2022 à 19:27
+-- Généré le : jeu. 15 déc. 2022 à 16:19
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.1.12
 
@@ -39,14 +39,8 @@ CREATE TABLE `all_trains` (
 --
 
 INSERT INTO `all_trains` (`id`, `name`, `gare_id`, `date_created`) VALUES
-(14, 'Train1ded', 34, '2022-12-13 11:21:55'),
-(16, 'train3', 33, '2022-12-13 11:22:17'),
-(17, 'train4', 32, '2022-12-13 11:22:24'),
-(19, 'train6', 30, '2022-12-13 11:22:40'),
-(21, 'train8', 27, '2022-12-13 11:22:57'),
-(24, 'train12', 23, '2022-12-13 11:23:18'),
-(26, 'trian20', 31, '2022-12-13 11:24:33'),
-(29, 'kkkkkkkkk', 26, '2022-12-14 19:12:06');
+(30, 'train_one', 37, '2022-12-15 14:04:40'),
+(32, 'train_twoeee', 37, '2022-12-15 15:59:47');
 
 -- --------------------------------------------------------
 
@@ -66,31 +60,9 @@ CREATE TABLE `gare` (
 --
 
 INSERT INTO `gare` (`id`, `name`, `ville_id`, `date_created`) VALUES
-(22, 'gare1', 7, '2022-12-13 11:19:43'),
-(23, 'gare2', 6, '2022-12-13 11:19:51'),
-(24, 'gare100', 2, '2022-12-13 11:20:00'),
-(25, 'gare4', 1, '2022-12-13 11:20:08'),
-(26, 'gare5', 3, '2022-12-13 11:20:15'),
-(27, 'gare6', 7, '2022-12-13 11:20:23'),
-(28, 'gare7', 2, '2022-12-13 11:20:31'),
-(29, 'gare8', 2, '2022-12-13 11:20:39'),
-(30, 'gare9', 7, '2022-12-13 11:20:50'),
-(31, 'gare10', 5, '2022-12-13 11:21:08'),
-(32, 'gare11', 3, '2022-12-13 11:21:16'),
-(33, 'gare12', 2, '2022-12-13 11:21:23'),
-(34, 'gare16', 1, '2022-12-13 11:21:32');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `historique`
---
-
-CREATE TABLE `historique` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `resirvation_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+(37, 'casablanka', 3, '2022-12-15 14:03:54'),
+(38, 'rabat', 2, '2022-12-15 14:04:03'),
+(42, 'eeeeeeeetttt', 6, '2022-12-15 15:50:35');
 
 -- --------------------------------------------------------
 
@@ -106,32 +78,6 @@ CREATE TABLE `orders` (
   `total` int(11) DEFAULT NULL,
   `date_reserved` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `orders`
---
-
-INSERT INTO `orders` (`id`, `voyage_id`, `user_id`, `qty_ticket`, `total`, `date_reserved`) VALUES
-(1, 7, 4, 12, 1200, '2022-12-13 21:24:53'),
-(4, 7, 4, 12, 1200, '2022-12-13 21:27:55'),
-(5, 7, 4, 12, 1200, '2022-12-13 23:23:31'),
-(6, 7, 4, 12, 1200, '2022-12-13 23:24:32'),
-(7, 7, 4, 12, 1200, '2022-12-13 23:25:18'),
-(10, 7, 3, 3, 300, '2022-12-13 23:38:53'),
-(11, 7, 3, 4, 400, '2022-12-13 23:50:06'),
-(12, 12, 4, 4, 400, '2022-12-14 08:04:56'),
-(13, 8, 4, 3, 3000, '2022-12-14 08:36:24'),
-(14, 7, 7, 12, 1200, '2022-12-14 11:16:31'),
-(15, 7, 8, 12, 1200, '2022-12-14 14:23:36'),
-(16, 7, 9, 4, 400, '2022-12-14 14:58:45'),
-(17, 7, 8, 3, 300, '2022-12-14 17:40:28'),
-(18, 7, 8, 3, 300, '2022-12-14 17:40:42'),
-(19, 7, 8, 3, 300, '2022-12-14 17:56:24'),
-(20, 7, 8, 4, 400, '2022-12-14 18:01:25'),
-(21, 7, 8, 5, 500, '2022-12-14 18:14:22'),
-(22, 7, 8, -12, -1200, '2022-12-14 18:16:05'),
-(23, 7, 7, 3, 300, '2022-12-14 19:06:08'),
-(24, 7, 7, 3, 300, '2022-12-14 19:06:32');
 
 -- --------------------------------------------------------
 
@@ -155,11 +101,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `photo`, `email`, `password`, `status`, `created_date`, `disabled`) VALUES
-(3, 'zyzyzyzdd', 'uploads/1670256381kjkkj.png', 'zoroeezzSS@gmail.com', '1d5434993ac8a24ecb1a40f7486e88e40cc97ff9', 'admin', '2022-12-04 12:49:11', 0),
+(3, 'zyzyzyzddllllkkkddeeess', 'uploads/1670256381kjkkj.png', 'zoroeezzSS@gmail.com', '1d5434993ac8a24ecb1a40f7486e88e40cc97ff9', 'admin', '2022-12-04 12:49:11', 0),
 (4, 'ffffffffffffffddddge', 'uploads/167092288401.jpg', 'zoroejed@gmail.com', '1d5434993ac8a24ecb1a40f7486e88e40cc97ff9', 'admin', '2022-12-04 12:51:16', 0),
-(7, 'mustapha', 'images.png', 'zoromustapha@gmail.com', '1d5434993ac8a24ecb1a40f7486e88e40cc97ff9', 'admin', '2022-12-14 10:30:07', 0),
+(7, 'mustaphaS', 'uploads/167110937502.jpg', 'zoromustapha@gmail.com', '1d5434993ac8a24ecb1a40f7486e88e40cc97ff9', 'admin', '2022-12-14 10:30:07', 0),
 (8, 'mustaphaar', 'uploads/167103869501.jpg', 'mustaphaa@gmail.com', '1d5434993ac8a24ecb1a40f7486e88e40cc97ff9', 'admin', '2022-12-14 14:22:17', 0),
-(9, 'mustapha', 'images.png', 'zoroaaa@gmail.com', 'c11cb543aef4bdffdf5ea13a4bf9025eb6e58420', 'customer', '2022-12-14 14:58:00', 0);
+(9, 'mustapharfdddd', 'uploads/167111479801.jpg', 'zoroaaa@gmail.com', 'c11cb543aef4bdffdf5ea13a4bf9025eb6e58420', 'customer', '2022-12-14 14:58:00', 1);
 
 -- --------------------------------------------------------
 
@@ -210,11 +156,7 @@ CREATE TABLE `voyagess` (
 --
 
 INSERT INTO `voyagess` (`id`, `depart`, `arrivee`, `time_start`, `time_end`, `train_id`, `price`, `disponible`, `date_created`, `date_voyege`, `qty`) VALUES
-(7, 34, 33, '12:25', '13:25', 26, 100, 1, '2022-12-13 11:25:38', '2022-12-15', 97),
-(8, 29, 30, '15:25', '17:25', 19, 1000, 1, '2022-12-13 11:26:08', '2022-12-15', 10000),
-(9, 24, 32, '13:26', '14:26', 16, 300, 1, '2022-12-13 11:26:36', '2022-12-17', 300),
-(12, 34, 33, '19:00', '21:00', 14, 100, 1, '2022-12-11 14:52:22', '2022-12-15', 196),
-(17, 30, 29, '21:26', '18:29', 21, 3, 1, '2022-12-14 18:26:38', '2022-12-15', 12);
+(22, 38, 37, '17:53', '15:56', 30, 122, 1, '2022-12-15 15:53:48', '2022-12-16', 1000);
 
 --
 -- Index pour les tables déchargées
@@ -239,8 +181,8 @@ ALTER TABLE `gare`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `voyage_id` (`voyage_id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD KEY `orders_ibfk_1` (`voyage_id`),
+  ADD KEY `orders_ibfk_2` (`user_id`);
 
 --
 -- Index pour la table `users`
@@ -259,9 +201,9 @@ ALTER TABLE `ville`
 --
 ALTER TABLE `voyagess`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `depart` (`depart`),
-  ADD KEY `arrivee` (`arrivee`),
-  ADD KEY `train_id` (`train_id`);
+  ADD KEY `voyagess_ibfk_1` (`depart`),
+  ADD KEY `voyagess_ibfk_2` (`arrivee`),
+  ADD KEY `voyagess_ibfk_3` (`train_id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -271,19 +213,19 @@ ALTER TABLE `voyagess`
 -- AUTO_INCREMENT pour la table `all_trains`
 --
 ALTER TABLE `all_trains`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT pour la table `gare`
 --
 ALTER TABLE `gare`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT pour la table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT pour la table `users`
@@ -301,7 +243,7 @@ ALTER TABLE `ville`
 -- AUTO_INCREMENT pour la table `voyagess`
 --
 ALTER TABLE `voyagess`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Contraintes pour les tables déchargées
@@ -311,28 +253,28 @@ ALTER TABLE `voyagess`
 -- Contraintes pour la table `all_trains`
 --
 ALTER TABLE `all_trains`
-  ADD CONSTRAINT `kr_train` FOREIGN KEY (`gare_id`) REFERENCES `gare` (`id`);
+  ADD CONSTRAINT `kr_train` FOREIGN KEY (`gare_id`) REFERENCES `gare` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `gare`
 --
 ALTER TABLE `gare`
-  ADD CONSTRAINT `gare_ville` FOREIGN KEY (`ville_id`) REFERENCES `ville` (`id`);
+  ADD CONSTRAINT `gare_ville` FOREIGN KEY (`ville_id`) REFERENCES `ville` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`voyage_id`) REFERENCES `voyagess` (`id`),
-  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`voyage_id`) REFERENCES `voyagess` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `voyagess`
 --
 ALTER TABLE `voyagess`
-  ADD CONSTRAINT `voyagess_ibfk_1` FOREIGN KEY (`depart`) REFERENCES `gare` (`id`),
-  ADD CONSTRAINT `voyagess_ibfk_2` FOREIGN KEY (`arrivee`) REFERENCES `gare` (`id`),
-  ADD CONSTRAINT `voyagess_ibfk_3` FOREIGN KEY (`train_id`) REFERENCES `all_trains` (`id`);
+  ADD CONSTRAINT `voyagess_ibfk_1` FOREIGN KEY (`depart`) REFERENCES `gare` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `voyagess_ibfk_2` FOREIGN KEY (`arrivee`) REFERENCES `gare` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `voyagess_ibfk_3` FOREIGN KEY (`train_id`) REFERENCES `all_trains` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
