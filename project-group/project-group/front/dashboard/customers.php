@@ -48,7 +48,7 @@ $data=$data;
         }
     </style>
 </head>
-<body class="bg-my-color-red fixed">
+<body class="">
 
     <?php require 'sidebar.php' ?>
     <section class="home-section">
@@ -99,7 +99,8 @@ $data=$data;
 
 <!-- Main modal -->
 
-            <table id="example" class="table table-striped md:table-fixed table-responsive" style="width:100%">
+            <div class="table-responsive">
+            <table id="examplesss" class="table table-striped md:table-fixed" style="width:100%">
                 <thead>
                 <tr>
                    
@@ -126,6 +127,7 @@ $data=$data;
                     </tr>
                 </tfoot>
             </table>
+            </div>
         </div>
         
     </section>

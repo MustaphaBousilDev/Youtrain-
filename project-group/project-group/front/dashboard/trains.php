@@ -50,7 +50,7 @@ $data=$data;
         }
     </style>
 </head>
-<body class="bg-my-color-red fixed">
+<body class="">
 
     <?php require 'sidebar.php' ?>
     <section class="home-section">
@@ -125,7 +125,8 @@ $data=$data;
 </div>
 
 
-            <table id="examples" class="table table-striped md:table-fixed " style="width:100%">
+            <div class="table-responsive">
+            <table id="exampless" class="table text-nowrap table-striped md:table-fixed " style="width:100%">
                 <thead>
                 <tr style="background-color:red;">
                     <th scope="col">#</th>
@@ -148,6 +149,7 @@ $data=$data;
                 </tr>
                 </tfoot>
             </table>
+            </div>
         </div>
         
     </section>

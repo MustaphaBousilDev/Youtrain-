@@ -49,7 +49,7 @@ $all_train=$voyege->get_all_train();
         }
     </style>
 </head>
-<body class="bg-my-color-red fixed">
+<body class="" style="background-color:#fff;">
 
     <?php require 'sidebar.php' ?>
     <section class="home-section">
@@ -174,7 +174,8 @@ $all_train=$voyege->get_all_train();
 
 <!-- Edit Voyege -->
 
-            <table id="example" class="table table-striped md:table-fixed table-responsive" style="width:100%">
+            <div class="table-responsive">
+            <table id="exampless" class="table table-striped md:table-fixed" style="width:100%">
                 <thead>
                 <tr>
                     <th scope="col">dpt</th>
@@ -207,6 +208,7 @@ $all_train=$voyege->get_all_train();
                 </tr>
                 </tfoot>
             </table>
+            </div>
         </div>
         
     </section>
